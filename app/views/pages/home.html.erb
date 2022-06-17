@@ -1,6 +1,13 @@
-<h1>Home Page</h1>
-<p>This is the home page.</p>
-<p>
-  <%= link_to 'Articles Listing', articles_path %> | 
-  <%= link_to 'About Page', about_path %>
-</p>
+<div class="container mt-5">
+  <div class="jumbotron home">
+    <div class="jumbotron overlay">
+      <h1 class="display-4 text-center">Alpha Blog</h1>
+      <p class="lead text-center">Sample blog site to introduce myself to Ruby on Rails!</p>
+      <hr class="my-4">
+      <div class="text-center">
+        <p>If you're interested in viewing the articles created using this system, click on the <b>Read More</b> button below.</p>
+        <a class="btn btn-primary btn-lg btn-danger" href="/articles" role="button">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

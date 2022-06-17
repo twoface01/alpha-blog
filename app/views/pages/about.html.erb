@@ -1,6 +1,14 @@
-<h1>About Page</h1>
-<p>This is the about page.</p>
-<p>
-  <%= link_to 'Articles Listing', articles_path %> | 
-  <%= link_to 'Home Page', root_path %>
-</p>
+<div class="container mt-5">
+  <div class="pt-3 pb-3">
+    <h4 class="text-center display-5 mb-4">About Page</h4>
+    
+    <div class="bg-light shadow rounded p-4 text-center">
+      <p>This is the about page.</p>
+      <p>
+        <%= link_to 'Home Page', root_path, class: "btn btn-danger" %>
+        <%= link_to 'Articles Listing', articles_path, class: "btn btn-secondary" %>
+      </p>
+    </div>
+    
+  </div>
+</div>

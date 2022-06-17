@@ -1,5 +1,15 @@
-<h1>Create A New Article</h1>
-
-<%= render 'form' %>
-
-<p><%= link_to 'Return to Articles Listing', articles_path %></p>
+<div class="container mt-5">
+  <div class="pt-3 pb-3">
+    <h4 class="text-center display-5 mb-4">Create A New Article</h4>
+    
+    <%= render 'form_errors' %>
+    
+    <div class="bg-light shadow rounded p-4 mb-4">
+      <%= render 'form' %>
+    </div>
+    
+    <div class="text-center mb-3">
+      <%= link_to "[ Return to Articles Listing ]", articles_path, class: "text-muted" %>
+    </div>
+  </div>
+</div>

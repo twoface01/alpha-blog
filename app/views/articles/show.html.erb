@@ -1,8 +1,27 @@
-<h1>Show Article Details</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
-<p>
-    <%= link_to 'Edit', edit_article_path(@article) %> | 
-    <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?" } %> | 
-    <%= link_to 'Return to Articles Listing', articles_path %>
-</p>
+<div class="container mt-3">
+  <div class="pt-3 pb-3">
+    <h4 class="text-center display-5 mb-4"><%= @article.title %></h4>
+    
+    <div class="card text-center shadow bg-white rounded mb-3">
+      <div class="card-header font-weight-bold font-italic">
+        By Chris Jones
+      </div>
+      <div class="card-body">
+        <div class="card-text text-left"><%= simple_format(@article.description) %></div>
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-danger" %>
+        <%= link_to 'Delete', article_path(@article), class: "btn btn-secondary", method: :delete, data: { confirm: "Are you sure you want to delete this article?" } %>
+      </div>
+      <div class="card-footer text-muted">
+        <small>
+          Created <%= time_ago_in_words(@article.created_at) %> ago
+          -
+          Updated <%= time_ago_in_words(@article.updated_at) %> ago
+        </small>
+      </div>
+    </div>
+    
+    <div class="text-center mb-3">
+      <%= link_to "[ Return to Articles Listing ]", articles_path, class: "text-muted" %>
+    </div>
+  </div>
+</div>

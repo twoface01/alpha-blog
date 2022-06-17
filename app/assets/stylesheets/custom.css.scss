@@ -1,0 +1,30 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar { background-color: #000 !important; }
+.navbar-brand, .nav-link { color: #fff !important; }
+.navbar-brand { text-transform: uppercase; }
+.jumbotron.home {
+    background-image: asset-url('home-jumbotron');
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.jumbotron.overlay { background-color: rgba(0,0,0,.5); }
+.jumbotron.home h1, .jumbotron.home p { color: #fff; }
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  background-color: #ddd;
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}

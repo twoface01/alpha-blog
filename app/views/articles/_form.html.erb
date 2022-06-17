@@ -1,14 +1,24 @@
-<%= render 'form_errors' %>
 <%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= f.label :title, class: "col-form-label font-weight-bold text-left" %>
+    </div>
+    <div class="col-9">
+      <%= f.text_field :title, class: 'form-control w-100' %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= f.label :description, class: "col-form-label font-weight-bold text-left" %>
+    </div>
+    <div class="col-9">
+      <%= f.text_area :description, rows: 5, class: 'form-control w-100' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <%= f.submit "Submit Article", class: "btn btn-danger" %>
+    </div>
+  </div>
   </p>
 <% end %>
