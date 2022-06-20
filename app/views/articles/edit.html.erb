@@ -1,12 +1,8 @@
 <div class="container mt-5">
   <div class="pt-3 pb-3">
     <h4 class="text-center display-5 mb-4">Edit An Existing Article</h4>
-    
-    <%= render 'form_errors' %>
-    
-    <div class="bg-light shadow rounded p-4 mb-4">
-      <%= render 'form' %>
-    </div>
+  
+    <%= render 'form' %>
     
     <div class="text-center mb-3">
       <%= link_to "[ Cancel Edit and Return to Articles Listing ]", articles_path, class: "text-muted" %>

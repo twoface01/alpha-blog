@@ -1,10 +1,12 @@
-<%= form_with(model: @article, local: true) do |f| %>
+<%= render 'shared/form_errors', obj: @article %>
+<div class="bg-light shadow rounded p-4 mb-4">
+  <%= form_with(model: @article, local: true) do |f| %>
   <div class="form-group row">
     <div class="col-3">
       <%= f.label :title, class: "col-form-label font-weight-bold text-left" %>
     </div>
     <div class="col-9">
-      <%= f.text_field :title, class: 'form-control w-100' %>
+      <%= f.text_field :title, class: "form-control w-100", placeholder: "Enter a title" %>
     </div>
   </div>
   <div class="form-group row">
@@ -12,7 +14,7 @@
       <%= f.label :description, class: "col-form-label font-weight-bold text-left" %>
     </div>
     <div class="col-9">
-      <%= f.text_area :description, rows: 5, class: 'form-control w-100' %>
+      <%= f.text_area :description, rows: 5, class: "form-control w-100", placeholder: "Enter a description" %>
     </div>
   </div>
   <div class="row">
@@ -21,4 +23,5 @@
     </div>
   </div>
   </p>
-<% end %>
+  <% end %>
+</div>
