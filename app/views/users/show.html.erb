@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="pt-3 pb-3">
+    <h4 class="text-center display-5 mb-4">View <%= @user.username %>'s Profile</h4>
+    
+    <%= gravatar_for @user, size: 200 %>
+    
+    <h5 class="text-center display-5 mt-4 mb-4">Articles</h5>
+    
+    <%= render 'articles/article' %>
+    
+  </div>
+</div>
