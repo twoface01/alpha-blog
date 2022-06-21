@@ -27,7 +27,7 @@
   </div>
   <div class="row">
     <div class="col-12 text-center">
-      <%= f.submit "Sign Up", class: "btn btn-danger" %>
+      <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-danger") %>
     </div>
   </div>
   </p>
