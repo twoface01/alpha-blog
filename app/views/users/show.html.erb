@@ -12,13 +12,27 @@
     
     <h5 class="text-center display-5 mt-4 mb-4">Articles</h5>
     
-    <div class="apple_pagination shadow mb-3">
-      <%= will_paginate @articles, :container => false %>
-    </div>
-    <%= render 'articles/article' %>
-    <div class="apple_pagination shadow mb-3">
-      <%= will_paginate @articles, :container => false %>
-    </div>
+    <% if @articles.count > 4 %>
+      <div class="apple_pagination shadow mb-3">
+        <%= will_paginate @articles, :container => false %>
+      </div>
+    <% end %>
+    
+    <% if @articles.count > 0 %>
+      <%= render 'articles/article' %>
+    <% else %>
+      <div class="row">
+        <div class="col-12 text-center">
+          This user has not published any articles!
+        </div>
+      </div>
+    <% end %>
+    
+    <% if @articles.count > 4 %>
+      <div class="apple_pagination shadow mb-3">
+        <%= will_paginate @articles, :container => false %>
+      </div>
+    <% end %>
     
   </div>
 </div>

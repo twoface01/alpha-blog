@@ -3,13 +3,27 @@
     <h4 class="text-center display-5 mb-4">All Articles</h4>
     <p class="text-center mt-3"><%= link_to 'Create A New Article', new_article_path, class: "btn btn-danger" %></p>
     
-    <div class="apple_pagination shadow mb-3">
-        <%= will_paginate @articles, :container => false %>
-    </div>
-    <%= render 'article' %>
-    <div class="apple_pagination shadow mb-3">
-        <%= will_paginate @articles, :container => false %>
-    </div>
+    <% if @articles.count > 4 %>
+      <div class="apple_pagination shadow mb-3">
+          <%= will_paginate @articles, :container => false %>
+      </div>
+    <% end %>
+    
+    <% if @articles.count > 0 %>
+      <%= render 'article' %>
+    <% else %>
+      <div class="row">
+        <div class="col-12 text-center">
+          There are currently no articles!
+        </div>
+      </div>
+    <% end %>
+    
+    <% if @articles.count > 4 %>
+      <div class="apple_pagination shadow mb-3">
+          <%= will_paginate @articles, :container => false %>
+      </div>
+    <% end %>
     
   </div>
 </div>
