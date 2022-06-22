@@ -10,7 +10,7 @@
     <h5 class="card-title"><%= article.title %></h5>
     <p class="card-text"><%= article.description %></p>
     <%= link_to 'Show', article_path(article), class: "btn btn-danger" %>
-    <% if logged_in? && article.user == current_user %>
+    <% if logged_in? && (article.user == current_user || current_user.admin?) %>
       <%= link_to 'Edit', edit_article_path(article), class: "btn btn-secondary" %>
       <%= link_to 'Delete', article_path(article), class: "btn btn-secondary", method: :delete, data: { confirm: "Are you sure you want to delete this article?" } %>
     <% end %>
