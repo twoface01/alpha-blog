@@ -10,7 +10,13 @@
     
     <h5 class="text-center display-5 mt-4 mb-4">Articles</h5>
     
+    <div class="apple_pagination shadow mb-3">
+      <%= will_paginate @articles, :container => false %>
+    </div>
     <%= render 'articles/article' %>
+    <div class="apple_pagination shadow mb-3">
+      <%= will_paginate @articles, :container => false %>
+    </div>
     
   </div>
 </div>

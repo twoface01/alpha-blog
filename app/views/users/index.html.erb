@@ -2,6 +2,9 @@
   <div class="pt-3 pb-3">
     <h4 class="text-center display-5 mb-4">Alpha Bloggers</h4>
   </div>
+  <div class="apple_pagination shadow mb-3">
+    <%= will_paginate @users, :container => false %>
+  </div>
   <% @users.each do |user| %>
     
   <div class="card text-center shadow bg-white rounded mb-3">
@@ -22,4 +25,7 @@
   </div>
 
   <% end %>
+  <div class="apple_pagination shadow mb-3">
+  <%= will_paginate @users, :container => false %>
+  </div>
 </div>

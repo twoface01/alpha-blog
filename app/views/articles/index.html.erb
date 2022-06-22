@@ -2,8 +2,14 @@
   <div class="pt-3 pb-3">
     <h4 class="text-center display-5 mb-4">All Articles</h4>
     <p class="text-center mt-3"><%= link_to 'Create A New Article', new_article_path, class: "btn btn-danger" %></p>
-
+    
+    <div class="apple_pagination shadow mb-3">
+        <%= will_paginate @articles, :container => false %>
+    </div>
     <%= render 'article' %>
+    <div class="apple_pagination shadow mb-3">
+        <%= will_paginate @articles, :container => false %>
+    </div>
     
   </div>
 </div>

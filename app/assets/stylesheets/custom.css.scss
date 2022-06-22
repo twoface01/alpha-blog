@@ -28,3 +28,33 @@ body {
 #sticky-footer {
     flex-shrink: none;
 }
+
+/* Styling for Pagination */
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+    background-color: #990000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      background: #ff0000;
+      color: #fff; text-decoration: none; padding: 5px; border-radius: 5px;  }
