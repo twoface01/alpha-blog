@@ -1,12 +1,10 @@
 <div class="container mt-5">
   <div class="pt-3 pb-3">
-    <h4 class="text-center display-5 mb-4">View <%= @user.username %>'s Profile</h4>
+    <h4 class="text-center display-5 mb-4">Category: <%= @category.name %></h4>
     
-    <%= gravatar_for @user, size: 200 %>
-    
-    <% if logged_in? && @user == current_user %>
+    <% if logged_in? && current_user.admin? %>
       <div class="text-center mt-4 mb-4">
-        <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-danger" %>
+        <%= link_to "Edit Category Name", edit_category_path(@category), class: "btn btn-danger" %>
       </div>
     <% end %>
     
@@ -23,7 +21,7 @@
     <% else %>
       <div class="row">
         <div class="col-12 text-center">
-          This user has not published any articles.
+          There are no articles available for this category.
         </div>
       </div>
     <% end %>
